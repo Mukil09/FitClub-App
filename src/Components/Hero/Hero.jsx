@@ -6,11 +6,14 @@ import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
+import { motion } from "framer-motion";
 
 function Hero() {
   const [animationStyle, setAnimationStyle] = useState({
     animation: "slideAnimation 5s infinite",
   });
+
+  const transition = { type: "spring", duration: 3 };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -22,6 +25,7 @@ function Hero() {
 
   return (
     <div className="hero flex justify-between">
+      <div className="blur hero-blur w-[22rem] h-[30rem] left-0"></div>
       <div className="left-h p-[2rem] pt-6 flex gap-8 flex-col flex-[3]">
         <Navbar />
 
@@ -74,24 +78,37 @@ function Hero() {
           Join now
         </button>
 
-        <div className="heart-rate flex flex-col gap-4 bg-darkGray w-fit p-4 items-start rounded-[5px] absolute right-16 top-28">
+        <motion.div
+          initial={{ right: "-1rem" }}
+          whileInView={{ right: "4rem" }}
+          transition={transition}
+          className="heart-rate flex flex-col gap-4 bg-darkGray w-fit p-4 items-start rounded-[5px] absolute right-16 top-28"
+        >
           <img src={Heart} alt="heart" className="w-8 animate-heart" />
           <span className="text-gray">Heart Rate </span>
           <span className="text-white text-[1.5rem]">116 bpm</span>
-        </div>
+        </motion.div>
 
         <img
           src={hero_image}
           alt="hero"
           className="absolute right-[8rem] top-[10rem] w-[23rem]"
         />
-        <img
+        <motion.img
+          initial={{ right: "11rem" }}
+          whileInView={{ right: "20rem" }}
+          transition={transition}
           src={hero_image_back}
           alt="hero"
           className="absolute right-[20rem] top-[4rem] z-[-1] w-[15rem]"
         />
 
-        <div className="calories gap-8 rounded-md flex bg-caloryCard p-4 w-fit absolute top-[34rem] right-[26rem] z-[1]">
+        <motion.div
+          initial={{ right: "32rem" }}
+          whileInView={{ right: "28rem" }}
+          transition={transition}
+          className="calories gap-8 rounded-md flex bg-caloryCard p-4 w-fit absolute top-[34rem] right-[26rem] z-[1]"
+        >
           <img
             src={Calories}
             alt="calories"
@@ -101,7 +118,7 @@ function Hero() {
             <span className="text-gray">Calories Burned </span>
             <span className="text-white text-[1.5rem]">220 kcal</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

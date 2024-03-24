@@ -6,6 +6,8 @@ import "../../Style.css";
 function Plans() {
   return (
     <div className="plans-container mt-[-4rem] px-8 flex flex-col gap-16 relative">
+      <div className="blur plan-blur-1"></div>
+      <div className="blur plan-blur-2"></div>
       <div className="flex gap-8 font-bold text-[3rem] justify-evenly text-white uppercase italic">
         <span className="stroke-text">READY TO START </span>
         <span>YOUR JOURNEY</span>
