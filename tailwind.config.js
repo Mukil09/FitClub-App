@@ -11,6 +11,7 @@ module.exports = {
         caloryCard: "#656565",
         planCard: "linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%)",
         appColor: "#3c3f45",
+        mildgray: "#ccc",
       },
     },
   },
