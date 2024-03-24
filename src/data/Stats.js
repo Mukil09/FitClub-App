@@ -1,14 +1,14 @@
 export const stats = [
   {
-    num: 140,
+    num: 170,
     title: "Expert coaches",
   },
   {
-    num: 950,
+    num: 290,
     title: "Members Joined",
   },
   {
-    num: 100,
+    num: 200,
     title: "Fitness programs",
   },
 ];

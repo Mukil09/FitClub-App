@@ -11,7 +11,7 @@ import "../../Style.css";
 
 function Reasons() {
   return (
-    <div className="Reasons" id="reasons">
+    <div className="Reasons flex-col md:flex-row" id="reasons">
       <div className="left-r">
         <img src={image1} alt="img" />
         <img src={image2} alt="img" />

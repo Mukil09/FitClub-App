@@ -11,11 +11,18 @@ function Testimonials() {
   const transition = { type: "spring", duration: 3 };
 
   return (
-    <div className="Testimonials flex gap-4 px-8">
+    <div
+      className="Testimonials flex flex-col md:flex-row gap-4 px-8"
+      id="testimonials"
+    >
       <div className="left-t flex flex-1 gap-8 flex-col uppercase text-white">
         <span className="text-orange font-bold">Testimonials</span>
-        <span className="stroke-text font-bold text-[3rem]">What they</span>
-        <span className="font-bold text-[3rem]">Say about us</span>
+        <span className="stroke-text font-bold text-[32px] md:text-[3rem]">
+          What they
+        </span>
+        <span className="font-bold text-[32px] md:text-[3rem]">
+          Say about us
+        </span>
         <motion.span
           key={selected}
           initial={{ opacity: 0, x: -100 }}
@@ -34,18 +41,18 @@ function Testimonials() {
         </span>
       </div>
 
-      <div className="right-t flex-1 relative">
+      <div className="right-t gap-8 md:gap-0 flex-1 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start relative">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           transition={{ ...transition, duration: 2 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="absolute w-[17rem] h-[20rem] border-[2px] border-orange bg-transparent right-[9rem] top-[0.9rem]"
+          className="relative hidden md:block  md:absolute w-[17rem] h-[20rem] border-[2px] border-orange bg-transparent right-[9rem] top-[0.9rem]"
         ></motion.div>
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           transition={{ ...transition, duration: 2 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="absolute w-[17rem] h-[20rem] border-[2px] bg-orange border-none right-[7rem] top-[4rem]"
+          className="relative hidden md:block md:absolute w-[17rem] h-[20rem] border-[2px] bg-orange border-none right-[7rem] top-[4rem]"
         ></motion.div>
         <motion.img
           key={selected}
@@ -55,10 +62,10 @@ function Testimonials() {
           transition={transition}
           src={testimonialsData[selected].image}
           alt="test"
-          className="absolute w-[17rem] h-[20rem] object-cover right-32 top-8"
+          className=" relative md:absolute w-[17rem] h-[20rem] object-cover top-0 right-0 md:right-32 md:top-8 self-auto md:self-center"
         />
 
-        <div className="arrows flex gap-4 absolute bottom-4 left-12">
+        <div className="arrows flex gap-4 relative md:absolute md:bottom-4 md:left-12 left-0 bottom-0">
           <img
             src={leftArrow}
             className="w-[1.5rem] cursor-pointer"

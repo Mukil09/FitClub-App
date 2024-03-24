@@ -5,16 +5,19 @@ import "../../Style.css";
 
 function Plans() {
   return (
-    <div className="plans-container mt-[-4rem] px-8 flex flex-col gap-16 relative">
+    <div
+      className="plans-container mt-[-4rem] px-8 flex flex-col gap-16 relative"
+      id="plan"
+    >
       <div className="blur plan-blur-1"></div>
       <div className="blur plan-blur-2"></div>
-      <div className="flex gap-8 font-bold text-[3rem] justify-evenly text-white uppercase italic">
+      <div className="flex flex-col md:flex-row gap-4 text-center md:text-start md:gap-8 font-bold text-[3rem] justify-evenly text-white uppercase italic">
         <span className="stroke-text">READY TO START </span>
         <span>YOUR JOURNEY</span>
         <span className="stroke-text">WITH US</span>
       </div>
 
-      <div className="plans">
+      <div className="plans flex-col md:flex-row">
         {plansData.map((plan, index) => {
           return (
             <div className="plan" key={index}>

@@ -21,8 +21,11 @@ function Join() {
       );
   };
   return (
-    <div className="join flex px-8 gap-40" id="join-us">
-      <div className="lefy-j text-white text-[3rem] font-bold uppercase relative">
+    <div
+      className="join flex flex-col md:flex-row px-8  gap-4 md:gap-40"
+      id="join-us"
+    >
+      <div className="left-j flex flex-col text-white text-[32px] md:text-[3rem] font-bold uppercase relative">
         <hr className="absolute w-[10.5rem] border-[2px] border-orange rounded-[20%]" />
         <div className="flex gap-4">
           <span className="stroke-text">READY TO </span>
@@ -34,7 +37,7 @@ function Join() {
         </div>
       </div>
 
-      <div className="right-j flex justify-center items-end">
+      <div className="right-j flex justify-center items-end p-8 md:p-0">
         <form
           ref={form}
           className="email-container flex gap-12 bg-gray py-4 px-8"

@@ -22,7 +22,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(260%);
+    transform: translateX(220%);
   }
   100% {
     transform: translateX(0);
@@ -94,13 +94,14 @@
   width: 14rem;
   grid-column: 2/3;
   grid-row: 2;
+  height: 10rem;
 }
 
 .left-r > :nth-child(4) {
   width: 11.5rem;
   grid-row: 2;
   grid-column: 3/4;
-  height: 10.2rem;
+  height: 10.1rem;
 }
 
 .right-r {
@@ -121,6 +122,21 @@
 
 .partners > img {
   width: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .left-r {
+    grid-auto-rows: auto;
+    overflow: hidden;
+  }
+
+  .left-r > :nth-child(3) {
+    height: 10rem;
+  }
+
+  .plans > :nth-child(2) {
+    transform: scale(1);
+  }
 }
 
 /* Plans */
@@ -162,8 +178,6 @@
 .plan:nth-child(2) {
   background: var(--planCard);
   transform: scale(1.1);
-  font-size: 1rem;
-  font-weight: bold;
 }
 
 .plan:nth-child(2) > svg {
@@ -172,6 +186,11 @@
 
 .plan:nth-child(2) > button {
   color: var(--orange);
+}
+
+.plan > :nth-child(2) {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .plan > :nth-child(3) {
