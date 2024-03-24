@@ -1,3 +1,9 @@
+/* Navbar */
+.menu li a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
 /* hero */
 
 .hero-btn > :nth-child(1) {
